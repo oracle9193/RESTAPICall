@@ -6,12 +6,11 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.restapicall.network.NYCApi
-import com.example.restapicall.network.NYCApiService
 import kotlinx.coroutines.launch
 
-class NYCViewModel: ViewModel() {
+class MarsViewModel: ViewModel() {
 
-    var nycUiState: String by mutableStateOf("")
+    var marsUiState: String by mutableStateOf("")
         private set
 
 
@@ -22,7 +21,7 @@ class NYCViewModel: ViewModel() {
         //  marsUiState = "Set the Mars API status response here!"
         viewModelScope.launch {
             val listResult = NYCApi.retrofitService.getPhotos()
-            nycUiState = listResult
+            marsUiState = listResult
         }
     }
 }

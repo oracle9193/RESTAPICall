@@ -7,14 +7,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.example.restapicall.ui.theme.RESTAPICallTheme
-import com.example.restapicall.viewmodel.NYCViewModel
+import com.example.restapicall.viewmodel.MarsViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.lifecycle.ViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,19 +41,11 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 @Composable
 fun NYCApp(){
-   // val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
-    val nycViewModel: NYCViewModel = viewModel()
+   
+    val marsViewModel: MarsViewModel = viewModel()
   var text1: String ="Hello"
-    text1 = nycViewModel.nycUiState
+    text1 = marsViewModel.marsUiState
     Text(text = text1)
-   // Text(text="svdv")
+
 
 }
-/*
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    RESTAPICallTheme {
-        Greeting("Android")
-    }
-}*/
