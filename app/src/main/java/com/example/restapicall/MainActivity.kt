@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     //Greeting("Android")
-                    NYCApp()
+                    MarsApp()
                 }
             }
         }
@@ -40,8 +40,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun NYCApp(){
-   
+fun MarsApp(){
+
     val marsViewModel: MarsViewModel = viewModel()
   var text1: String ="Hello"
     text1 = marsViewModel.marsUiState
